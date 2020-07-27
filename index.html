@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    <link rel="icon" type="image/png" href="image/" sizes="32x32">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Master Seek</title>
+    <!-- Fonts style -->
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="CSS/custom.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+</head>
+<body>
+<div id="overlay"></div>
+<div class="masterseek-dashboard">
+    <div class="mob-nav d-xl-none d-lg-none d-md-block d-sm-block">
+        <div class="logo d-inline">
+            <a href="#">
+                <img src="https://www.masterseek.com/newcss2018/assets/images/masterseek_logo_small.png" alt="">
+            </a>
+        </div>
+        <span class="d-inline open-span" onclick="openNav()"><img alt="" src="image/sidenav.svg"></span>
+    </div>
+    <div class="dashboard-left bg-white" id="mySidenav">
+        <div class="sidebar">
+            <span class="d-xl-none d-lg-none d-md-block d-sm-block closebtn" onclick="closeNav()"><img alt="" src="image/close-button.svg"></span>
+            <div class="logo d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                <a href="#">
+                    <img src="https://www.masterseek.com/newcss2018/assets/images/masterseek_logo_small.png" alt="">
+                </a>
+            </div>
+            <div class="menu-content">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Updates</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Payments</a></li>
+                    <li><a href="">Balance</a></li>
+                    <li><a href="">Customers</a></li>
+                    <li><a href="">Reports</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Atlas</a></li>
+                    <li><a href="">Radar</a></li>
+                    <li><a href="">Billing</a></li>
+                    <li><a href="">Connect</a></li>
+                    <li><a href="">Orders</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Developers</a></li>
+                    <li><a href="">View test data</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-right">
+        <div class="right-body">
+            <div class="search-fields bg-white position-relative">
+                <form class="row">
+                    <div class="col-lg-6">
+                        <label class="w-100 font-18">
+                            <span class="d-block">find</span>
+                            <input class="w-100" type="text" autocomplete="off" id="search">
+                        </label>
+                        <ul id="search-result">
+                            <li class="align-items-center position-relative">
+                                <img class="d-inline" alt="" src="image/carlsberg.png">
+                                <span class="name d-inline">Carlsberg Group</span>
+                                <span class="website d-inline">carlsberggroup.com</span>
+                            </li>
+                            <li class="align-items-center position-relative">
+                                <img class="d-inline" alt="" src="image/carlsberg-byen.png">
+                                <span class="name d-inline">Carlsberg Byen</span>
+                                <span class="website d-inline">carlsbergbyen.dk</span>
+                            </li>
+                            <li class="align-items-center position-relative">
+                                <img class="d-inline" alt="" src="image/carlsberg.png">
+                                <span class="name d-inline">Carlsberg Camping</span>
+                                <span class="website d-inline">carlsbergcamping.dk</span>
+                            </li>
+                            <li class="align-items-center position-relative">
+                                <img class="d-inline" alt="" src="image/carlsberg.jpg">
+                                <span class="name d-inline">Carlsberg Group</span>
+                                <span class="website d-inline">Carlsberg.com</span>
+                                <span class="count d-inline d-xl-inline d-lg-none d-md-none d-sm-none">78 results</span>
+                            </li>
+                            <li class="align-items-center position-relative">
+                                <img class="d-inline" alt="" src="image/carlsbergfondet.svg">
+                                <span class="name d-inline">Carlsbergfondet</span>
+                                <span class="website d-inline">carlsbergfondet.dk</span>
+                                <span class="count d-inline d-xl-inline d-lg-none d-md-none d-sm-none">10 results</span>
+                            </li>
+                            <li class="align-items-center position-relative">
+                                <img class="d-inline" alt="" src="image/carlsbergcamping.svg">
+                                <span class="name d-inline">Carlsberg Camping</span>
+                                <span class="website d-inline">carlsbergcamping.dk</span>
+                                <span class="count d-inline d-xl-inline d-lg-none d-md-none d-sm-none">2 results</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="wrap-partition d-xl-none d-lg-none d-md-block d-sm-block">
+                    <div class="col-lg-6">
+                        <label class="w-100 font-18">
+                            <span class="d-block">location</span>
+                            <input class="w-100" type="text" autocomplete="off" id="location">
+                        </label>
+                        <ul id="location-result">
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/united-states.svg">
+                                <span class="name">United States</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/united-kingdom.svg">
+                                <span class="name">United Kingdom</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/brazil.png">
+                                <span class="name">Brazil</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/ireland.svg">
+                                <span class="name">Ireland</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/china.png">
+                                <span class="name">China</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/russia.png">
+                                <span class="name">Russia</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/nigeria.png">
+                                <span class="name">Nigeria</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/germany.png">
+                                <span class="name">Germany</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/france.png">
+                                <span class="name">France</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img alt="" src="image/norway.png">
+                                <span class="name">Norway</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-field-border col-lg-12">
+                        <p>Showing <span>1</span> - <span>20</span> of <span>299</span></p>
+                    </div>
+                </form>
+            </div>
+            <div class="bg-white dashboard-list position-relative">
+                <div class="filter-wrap row align-items-center">
+                    <div class="filter col-lg-10 d-xl-inline d-lg-inline d-md-none d-sm-none d-none">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 pr-lg-0 filter-drop">
+                                <select>
+                                    <option selected disabled>FILTERS</option>
+                                    <option>Yes/No</option>
+                                    <option>Age Range</option>
+                                    <option>Newspaper</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-9 pl-0">
+                                <div class="filter-1">
+                                    <img src="image/toggle.svg" alt="">
+                                    <p>Yes/No</p>
+                                    <span>x</span>
+                                </div>
+                                <div class="filter-1">
+                                    <img src="image/aim.svg" alt="">
+                                    <p>Age range 30 - 60</p>
+                                    <span>x</span>
+                                </div>
+                                <div class="filter-1">
+                                    <p>Newspaper</p>
+                                    <span>x</span>
+                                </div>
+                                <a href="">
+                                    <img class="remove" src="image/delete.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 pl-0">
+                        <div class="toggle-switch">
+                            <label class="test-switch">
+                                <input type="checkbox" checked>
+                                <span class="test-switch-slider"></span>
+                                Viewing test data
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <hr class="wrap-partition d-xl-block d-md-block d-sm-none d-none">
+                <div class="listing-wrap col-lg-7">
+                    <div class="listing listing-1">
+                        <h1 class="heading" data-toggle="modal" data-target="#overview">IBM Corp</h1>
+                        <img class="listing-tooltip" data-toggle="tooltip" title="IBM!" src="image/info.svg" alt="info">
+                        <a href="" class="listing-link">ibm.com</a>
+                        <p class="listing-body"><strong>IBM |</strong> Complete International Business Machines Corp. stock news by MarketWatch. View real-time stock prices
+                            and stock quotes for a full financial overview.</p>
+                    </div>
+                    <div class="listing">
+                        <h1 class="heading" data-toggle="modal" data-target="#overview">IBM Corp</h1>
+                        <img class="listing-tooltip" data-toggle="tooltip" title="IBM!" src="image/info.svg" alt="info">
+                        <a href="" class="listing-link">ibm.com</a>
+                        <p class="listing-body"><strong>IBM |</strong> Complete International Business Machines Corp. stock news by MarketWatch. View real-time stock prices
+                            and stock quotes for a full financial overview.</p>
+                    </div>
+                    <div class="listing">
+                        <h1 class="heading" data-toggle="modal" data-target="#overview">IBM Corp</h1>
+                        <img class="listing-tooltip" data-toggle="tooltip" title="IBM!" src="image/info.svg" alt="info">
+                        <a href="" class="listing-link">ibm.com</a>
+                        <p class="listing-body"><strong>IBM |</strong> Complete International Business Machines Corp. stock news by MarketWatch. View real-time stock prices
+                            and stock quotes for a full financial overview.</p>
+                    </div>
+                    <div class="listing">
+                        <h1 class="heading" data-toggle="modal" data-target="#overview">IBM Corp</h1>
+                        <img class="listing-tooltip" data-toggle="tooltip" title="IBM!" src="image/info.svg" alt="info">
+                        <a href="" class="listing-link">ibm.com</a>
+                        <p class="listing-body"><strong>IBM |</strong> Complete International Business Machines Corp. stock news by MarketWatch. View real-time stock prices
+                            and stock quotes for a full financial overview.</p>
+                    </div>
+                    <div class="listing">
+                        <h1 class="heading" data-toggle="modal" data-target="#overview">IBM Corp</h1>
+                        <img class="listing-tooltip" data-toggle="tooltip" title="IBM!" src="image/info.svg" alt="info">
+                        <a href="" class="listing-link">ibm.com</a>
+                        <p class="listing-body"><strong>IBM |</strong> Complete International Business Machines Corp. stock news by MarketWatch. View real-time stock prices
+                            and stock quotes for a full financial overview.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-xl-none d-lg-none d-md-block d-sm-block">
+        <div class="filter-button" data-toggle="modal" data-target="#filter">
+            <img alt="" src="image/filter.svg">
+        </div>
+    </div>
+</div>
+
+<!--filter Modal -->
+<div class="modal fade filter-modal" id="filter" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body position-relative">
+                <img src="image/close-button.svg" alt="" data-dismiss="modal" aria-label="Close">
+                <form>
+                    <div class="form-group field-wrap">
+                        <label for="filterlocation" class="bmd-label-floating d-block filter-label">Location</label>
+                        <select class="d-block filter-select" id="filterlocation">
+                            <option>New York, USA</option>
+                            <option>Canada</option>
+                            <option>Spain</option>
+                        </select>
+                    </div>
+                    <div class="form-group field-wrap">
+                        <label for="filterrevenue" class="bmd-label-floating d-block filter-label">Revenue</label>
+                        <select class="d-block filter-select" id="filterrevenue">
+                            <option>Any</option>
+                        </select>
+                    </div>
+                    <div class="form-group field-wrap">
+                        <label for="filteremployees" class="bmd-label-floating d-block filter-label">No of employees</label>
+                        <select class="d-block filter-select" id="filteremployees">
+                            <option>5000 - 10000</option>
+                        </select>
+                    </div>
+                    <div class="form-group field-wrap">
+                        <label for="filterdate" class="bmd-label-floating d-block filter-label">Domain reg. date</label>
+                        <select class="d-block filter-select" id="filterdate">
+                            <option>Anytime</option>
+                        </select>
+                    </div>
+                    <div class="form-group field-wrap">
+                        <label for="filtercategory" class="bmd-label-floating d-block filter-label">Category</label>
+                        <select class="d-block filter-select" id="filtercategory">
+                            <option>Select one</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="reset" class="cancel">Cancel</button>
+                        <button type="submit" class="apply">Apply</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Overview Modal -->
+<div class="modal fade overview-modal" id="overview" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <nav class="p-1 pl-3 pt-2 pb-2 d-xl-none d-lg-none w-100 text-center">
+                <img data-dismiss="modal" aria-label="Close" class="back-arrow d-inline float-left p-1" alt="" src="image/back.svg">
+                <p class="mb-0 modal-head font-weight-bold d-inline">Details</p>
+            </nav>
+            <ul class="nav nav-tabs">
+                <li><a class="active" data-toggle="tab" href="#home"><p>Company Summary</p></a></li>
+                <li><a class="tabs" data-toggle="tab" href="#menu1"><p>List of Employees</p></a></li>
+                <li><a class="tabs" data-toggle="tab" href="#menu2"><p>Send Message</p></a></li>
+            </ul>
+            <div class="modal-body position-relative">
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="row align-items-center company-row mt-lg-3">
+                            <div class="col-lg-6">
+                                <strong>Name</strong>
+                                <p class="company-name">IBM United Kingdom Limited</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <img alt="" src="image/ibm-logo.png" class="float-lg-right company-logo">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row details-row">
+                            <div class="col-lg-6">
+                                <ul class="right">
+                                    <li class="mb-2 website">
+                                        <strong>Website</strong>
+                                        <a href=""><p>www.ibm.com</p></a>
+                                    </li>
+                                    <li class="mb-2 phone">
+                                        <strong>Phone</strong>
+                                        <p>+4530254570 <span>(Mobile)</span></p>
+                                    </li>
+                                    <li class="email">
+                                        <strong>Email</strong>
+                                        <a href=""><p>hohn@ibm.com</p></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <hr class="d-xl-none d-lg-none d-md-block d-sm-block">
+                                <ul>
+                                    <li>
+                                        <strong>Registered Address</strong>
+                                        <p>P.O. Box 40 North Harbour</p>
+                                        <p>Hants</p>
+                                        <p>Portsmouth</p>
+                                        <p>Hampshire</p>
+                                        <p>PO6 3AU</p>
+                                        <p>United Kingdom</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="more-info mb-3">
+                            <strong>Related Names</strong>
+                            <p>IBM Notes, IBM Rational AppScan, Lotus Notes Mail,Ami Pro,
+                                International Business Machines Personal Computer,
+                                App scan,AIXv3, Big Blue, IBM Informix, IBM Db2 Family,
+                                Josef Raviv Memorial Postdoctoral Fellowship, Ims/db</p>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <strong>List of employees</strong>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <strong>Send message</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" rel="script" src="JS/jquery.js"></script>
+<script type="text/javascript" rel="script" src="JS/bootstrap.js"></script>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("overlay").style.display = "none";
+    }
+    $("#search-result").hide();
+    $("#location-result").hide();
+    $("#search").focusin(function() {
+        $("#search-result").show();
+    }).focusout(function () {
+        $("#search-result").hide();
+    });
+    $("#location").focusin(function() {
+        $("#location-result").show();
+    }).focusout(function () {
+        $("#location-result").hide();
+    });
+</script>
+
+</html>
